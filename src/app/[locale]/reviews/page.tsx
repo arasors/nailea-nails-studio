@@ -47,11 +47,11 @@ export default async function ReviewsPage({ params }: Props) {
             <div className="review-card-head">
               <span className={`review-avatar review-avatar-${(review.id % 5) + 1}`}>{review.initials}</span>
               <div><h2>{review.author}</h2><p>{review.service}</p></div>
-              <span className="review-source-mark" aria-label={copy.reviews.sampleBadge}>N</span>
+             
             </div>
             <div className="review-card-meta"><span className="review-stars">{Array.from({ length: 5 }, (_, index) => <Star key={index} aria-hidden="true" size={15} fill={index < review.rating ? "currentColor" : "none"} />)}</span><time dateTime={review.date}>{formatDate(review.date, locale)}</time></div>
             <p className="review-card-text">{review.text}</p>
-            <span className="sample-label"><ShieldCheck aria-hidden="true" size={13} /> {copy.reviews.sampleBadge}</span>
+            
           </article>
         ))}
       </section>
